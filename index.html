@@ -1,77 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <form name="calc">
-            <input type="text" class="display" name="display" />
-            <br>
-            <!-- The input tag below deletes or clear the value on the screen -->
-            <input type="button" class="button" value ="C" 
-            onClick="calc.display.value=''" id="del"/>
-            <!-- challenge Number 1
+      <form name="calc">
+        <input type="text" class="display" name="display" id="displayScreen" />
+        <br />
+        <hr style="margin-bottom: 10px; width:100%;
+        text-align: center; justify-content: center; color: aquamarine;">
+        <!-- The input tag below deletes or clear the value on the screen -->
+        <input
+          type="button"
+          class="button"
+          value="C"
+          onClick="calc.display.value=''"
+          id="del"
+        />
+        <!-- challenge Number 1
                 1. having the value inputted in the display screen of the calculator
                 solution
                 1. Using a form, the form tag must have a name attribute.
                 2. The display input screen should hava an attribute of class and name.
                 3. The keys input tag will have type="button", a class and the value of the key then an onClick attribute with the value of the "nameValueOfTheForm.classValueOfDisplayInputTag.value+='Key'"
             -->
-            <!-- <input type="button" class="button" value ='&#40; &#41;'
+        <!-- <input type="button" class="button" value ='&#40; &#41;'
                 onClick="calc.display.value+='&#40; &#41;'" /> -->
-                <input type="button" class="button" value ="&#37;" 
-                onClick="calc.display.value='&#37;'" />
-                <input type="button" class="button" value ="/" 
-                onClick="calc.display.value+='/'" />
-                <input type="button" class="button" value="del" 
-                onClick="calc.display.value=(calc.display.value.slice(0,-1))" />
-                <!-- The input tag above deletes the  -->
-             <br>
-             <input type="button" class="button" value ="7" 
-             onClick="calc.display.value+='7'" />
-             <input type="button" class="button" value ="8" 
-             onClick="calc.display.value+='8'" />
-             <input type="button" class="button" value ="9" 
-             onClick="calc.display.value+='9'" />
-             <input type="button" class="button" value ="*" 
-             onClick="calc.display.value+='*'" />
-             <br>
-             <input type="button" class="button" value ="4" 
-             onClick="calc.display.value+='4'" />
-             <input type="button" class="button" value ="5" 
-             onClick="calc.display.value+='5'" />
-             <input type="button" class="button" value ="6" 
-             onClick="calc.display.value+='6'" />
-             <input type="button" class="button" value ="-" 
-             onClick="calc.display.value+='-'" />
-             <br>
-             <input type="button" class="button" value ="1" 
-             onClick="calc.display.value+='1'" />
-             <input type="button" class="button" value ="2" 
-             onClick="calc.display.value+='2'" />
-             <input type="button" class="button" value ="3" 
-             onClick="calc.display.value+='3'" />
-             <input type="button" class="button" value="+" 
-             onClick="calc.display.value+='+'" />
-             <br>
-             <input type="button" class="button" value="0" 
-             onClick="calc.display.value+='0'" />
-             <input type="button" class="button" value="." 
-             onClick="calc.display.value+='.'" />
-             <input type="button" class="button" value="&equals;" 
-             onClick="calc.display.value=eval(calc.display.value)" />
-             <!-- the Eval function is used to perform the equal to function, The Eval function  evaluates the string operation and returns it value.
-                
+        <!-- <input type="button" class="button" value ="%" 
+                onClick="calc.display.value+='%'" /> -->
+        <input
+          type="button"
+          class="button"
+          value="/"
+          onClick="calc.display.value+='/'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="*"
+          onClick="calc.display.value+='*'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="del"
+          id="back"
+          onClick="calc.display.value=(calc.display.value.slice(0,-1))"
+        />
+        <!-- The input tag above deletes the content in the display 
+            screen in descending order -->
+        <br />
+        <input
+          type="button"
+          class="button"
+          value="7"
+          onClick="calc.display.value+='7'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="8"
+          onClick="calc.display.value+='8'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="9"
+          onClick="calc.display.value+='9'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="-"
+          onClick="calc.display.value+='-'"
+        />
+        <br />
+        <input
+          type="button"
+          class="button"
+          value="4"
+          onClick="calc.display.value+='4'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="5"
+          onClick="calc.display.value+='5'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="6"
+          onClick="calc.display.value+='6'"
+        />
+        <input
+          type="button"
+          class="button"
+          id="plus"
+          value="+"
+          onClick="calc.display.value+='+'"
+        />
+        <br />
+        <input
+          type="button"
+          type="button"
+          class="button"
+          value="1"
+          onClick="calc.display.value+='1'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="2"
+          onClick="calc.display.value+='2'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="3"
+          onClick="calc.display.value+='3'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="*"
+          onClick="calc.display.value+='*'"
+        />
+        <br />
+        <input
+          type="button"
+          class="button"
+          value="0"
+          onClick="calc.display.value+='0'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="0"
+          onClick="calc.display.value+='0'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="."
+          onClick="calc.display.value+='.'"
+        />
+        <input
+          type="button"
+          class="button"
+          value="&equals;"
+          id="equalTo"
+          onClick="calc.display.value=eval(calc.display.value)"
+        />
+        <!-- the Eval function is used to perform the equal
+            to function,The Eval function  evaluates the string 
+            operation and returns it value.
             -->
-             
-            </form>
+      </form>
     </main>
 
     <!-- <table>
@@ -122,5 +217,5 @@
             </tr>
         </tbody>
     </table> -->
-</body>
+  </body>
 </html>
